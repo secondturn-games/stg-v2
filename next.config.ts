@@ -1,7 +1,8 @@
+import withPWA from "next-pwa";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // No custom config needed for now
 };
 
-export default nextConfig;
+export default withPWA(nextConfig);
