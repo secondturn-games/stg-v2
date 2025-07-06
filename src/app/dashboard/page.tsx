@@ -2,6 +2,7 @@ import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
 import { currentUser } from '@clerk/nextjs/server';
 import Link from 'next/link';
 import { BottomNav } from '@/components/BottomNav';
+import Image from 'next/image';
 
 export default async function DashboardPage() {
   const user = await currentUser();
@@ -12,10 +13,13 @@ export default async function DashboardPage() {
         <section className="w-full max-w-xs flex flex-col items-center bg-white dark:bg-[#1a2118] rounded-2xl shadow-lg py-8 px-4 mb-6 border border-transparent dark:border-[#6C8C64]">
           {user?.imageUrl && (
             <Link href="/profile" className="mb-4">
-              <img
+              <Image
                 src={user.imageUrl}
                 alt="User avatar"
+                width={80}
+                height={80}
                 className="w-20 h-20 rounded-full border-4 border-[#6C8C64] shadow hover:scale-105 transition-transform cursor-pointer"
+                priority
               />
             </Link>
           )}
