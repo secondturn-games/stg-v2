@@ -30,7 +30,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#6C8C64" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png" />
+        {/* Example nav logo usage: <link rel="preload" as="image" href="/nav-logo.svg" /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#DBE5B9] text-[#29432B] dark:bg-[#222b1f] dark:text-[#DBE5B9]`}
