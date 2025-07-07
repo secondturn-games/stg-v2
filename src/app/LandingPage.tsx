@@ -13,7 +13,7 @@ function NewsletterForm() {
     setSubmitting(true);
     setError('');
     // Honeypot value
-    const website = (e.target as any).website.value;
+    const website = (e.target as HTMLFormElement).website.value;
     if (website) {
       setSubmitting(false);
       return;
@@ -41,7 +41,7 @@ function NewsletterForm() {
     return (
       <div className="w-full flex flex-col items-center">
         <p className="text-lg text-[#6C8C64] dark:text-[#DBE5B9] font-semibold text-center mb-2">Thank you for signing up!</p>
-        <p className="text-center text-[#29432B] dark:text-[#DBE5B9]">You'll be the first to know when we launch.</p>
+        <p className="text-center text-[#29432B] dark:text-[#DBE5B9]">You&apos;ll be the first to know when we launch.</p>
       </div>
     );
   }
