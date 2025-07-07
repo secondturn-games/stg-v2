@@ -1,7 +1,7 @@
 import { UserProfile, SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
 import { BottomNav } from '@/components/BottomNav';
 import Link from 'next/link';
-import { SignOutButton } from '@clerk/nextjs';
+import { ProfileLogOutButton } from '@/components/ProfileLogOutButton';
 
 export default function ProfilePage() {
   return (
@@ -30,13 +30,7 @@ export default function ProfilePage() {
             },
           }}
         />
-        <div className="w-full max-w-xs mt-6 mb-2">
-          <SignOutButton redirectUrl="/">
-            <button className="w-full py-3 rounded-lg font-semibold text-white bg-[#D95323] hover:bg-[#b53e17] dark:bg-[#b53e17] dark:hover:bg-[#D95323] transition-colors text-lg shadow cursor-pointer">
-              Log Out
-            </button>
-          </SignOutButton>
-        </div>
+        <ProfileLogOutButton />
         <BottomNav />
       </SignedIn>
       <SignedOut>
