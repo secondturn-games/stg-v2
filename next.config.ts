@@ -10,6 +10,11 @@ const pwaConfig = withPWA(nextConfig);
 export default {
   ...pwaConfig,
   images: {
-    domains: ["img.clerk.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.clerk.com",
+      },
+    ],
   },
 };

@@ -1,6 +1,12 @@
 import Link from 'next/link';
+import LandingPage from './LandingPage';
+
+const showLanding = process.env.NEXT_PUBLIC_SHOW_LANDING_ONLY === 'true';
 
 export default function Home() {
+  if (showLanding) {
+    return <LandingPage />;
+  }
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#DBE5B9] p-4">
       <section className="w-full max-w-xs flex flex-col items-center bg-white rounded-2xl shadow-lg py-10 px-4">
