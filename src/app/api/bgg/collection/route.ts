@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
       }, { onConflict: 'clerk_user_id,objectid' }); // Fix: onConflict should be a string
     }
     return NextResponse.json({ success: true, count: collection.length });
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message || 'Failed to fetch or save collection' }, { status: 500 });
+  } catch {
+    return NextResponse.json({ error: 'Failed to fetch collection' }, { status: 500 });
   }
 } 

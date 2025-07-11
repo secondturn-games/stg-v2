@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
         thumbnail: '', // BGG search API does not return thumbnail, can be fetched later if needed
       }));
     return NextResponse.json({ games });
-  } catch (e: any) {
-    return NextResponse.json({ games: [] });
+  } catch {
+    return NextResponse.json({ error: 'Failed to search BGG' }, { status: 500 });
   }
 } 

@@ -1,7 +1,6 @@
 'use client';
 
 import { UserProfile, SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
-import { BottomNav } from '@/components/BottomNav';
 import Link from 'next/link';
 import { ProfileLogOutButton } from '@/components/ProfileLogOutButton';
 import { useEffect, useState } from 'react';

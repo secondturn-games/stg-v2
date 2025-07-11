@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const BRAND_GREEN = "#6C8C64";
 const BRAND_LIGHT_BG = "#E6EAD7";
 const BRAND_DARK_BG = "#29432B";
 

@@ -12,7 +12,6 @@ interface BGGGame {
 }
 
 export default function CollectionPage() {
-  const { user } = useUser();
   const [bggUsername, setBggUsername] = useState("");
   const [games, setGames] = useState<BGGGame[]>([]);
   const [search, setSearch] = useState("");
@@ -37,8 +36,8 @@ export default function CollectionPage() {
       if (!res.ok) throw new Error("Failed to fetch collection");
       const data = await res.json();
       setGames(data.games || []);
-    } catch (e: any) {
-      setError(e.message || "Error fetching collection");
+    } catch {
+      setError("Error fetching collection");
     } finally {
       setLoading(false);
     }

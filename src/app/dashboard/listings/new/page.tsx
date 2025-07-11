@@ -55,8 +55,8 @@ export default function NewListingPage() {
       if (!res.ok) throw new Error('Failed to fetch results');
       const data = await res.json();
       setResults(data.games || []);
-    } catch (e: any) {
-      setError(e.message || 'Error fetching results');
+    } catch {
+      setError('Error fetching results');
     } finally {
       setLoading(false);
     }

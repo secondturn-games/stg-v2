@@ -3,12 +3,11 @@
 import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
 import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
-import { BottomNav } from '@/components/BottomNav';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function DashboardPage() {
-  const { user, isLoaded } = useUser();
+  const { user } = useUser();
   const [bggUsername, setBggUsername] = useState('');
   const [initialBggUsername, setInitialBggUsername] = useState('');
   const [loading, setLoading] = useState(false);
@@ -42,7 +41,7 @@ export default function DashboardPage() {
       body: JSON.stringify({ bgg_username: bggUsername.trim() })
     });
 
-    let data: any = {};
+    let data = {};
     try {
       data = await res.json();
     } catch {
@@ -53,7 +52,7 @@ export default function DashboardPage() {
       setSuccess(true);
       setInitialBggUsername(bggUsername.trim());
     } else {
-      setError(data.error || 'Failed to save');
+      setError((data as { error?: string }).error || 'Failed to save');
     }
     setSaving(false);
   };

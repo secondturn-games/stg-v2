@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
         (game.originalname && game.originalname.toLowerCase().includes(q))
       );
     return NextResponse.json({ games });
-  } catch (e: any) {
-    return NextResponse.json({ games: [] });
+  } catch {
+    return NextResponse.json({ error: 'Failed to search collection' }, { status: 500 });
   }
 } 
