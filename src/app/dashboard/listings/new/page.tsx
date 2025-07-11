@@ -12,7 +12,6 @@ interface BGGGame {
 }
 
 export default function NewListingPage() {
-  const { user } = useUser();
   const [bggUsername, setBggUsername] = useState("");
   const [search, setSearch] = useState("");
   const [source, setSource] = useState<'collection' | 'bgg' | null>(null);
