@@ -81,7 +81,7 @@ function NewsletterForm() {
 
 export default function LandingPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#DBE5B9] dark:bg-[#222b1f] p-4">
+    <main className="flex min-h-screen items-center justify-center dark:bg-[#222b1f] p-4">
       <section className="w-full max-w-md flex flex-col items-center bg-[#E6EAD7] dark:bg-[#1a2118] rounded-2xl shadow-lg py-10 px-4">
         <div className="w-full max-w-xs mb-4">
           <Image src="/logo.png" alt="Second Turn Logo" width={400} height={80} className="w-full h-auto" priority />

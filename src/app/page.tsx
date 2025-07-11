@@ -8,7 +8,7 @@ export default function Home() {
     return <LandingPage />;
   }
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#DBE5B9] p-4">
+    <main className="flex min-h-screen items-center justify-center p-4">
       <section className="w-full max-w-xs flex flex-col items-center bg-white rounded-2xl shadow-lg py-10 px-4">
         <h1 className="text-3xl font-bold text-[#6C8C64] mb-2 text-center">Second Turn</h1>
         <h2 className="text-xl font-semibold text-[#29432B] mb-4 text-center">

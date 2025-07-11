@@ -15,6 +15,10 @@ export default {
         protocol: "https",
         hostname: "img.clerk.com",
       },
+      {
+        protocol: "https",
+        hostname: "cf.geekdo-images.com",
+      },
     ],
   },
 };
